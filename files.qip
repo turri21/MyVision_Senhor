@@ -1,0 +1,19 @@
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/vdp18v/vdp18_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/vdp18v/vdp18_pattern.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/vdp18v/vdp18_sprite.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/vdp18v/vdp18_clk_gen.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/vdp18v/vdp18_col_mux.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/vdp18v/vdp18_cpuio.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/vdp18v/vdp18_ctrl.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/vdp18v/vdp18_hor_vert.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/vdp18v/vdp18_addr_mux.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/vdp18v/vdp18_core.sv
+
+
+set_global_assignment -name QIP_FILE rtl/T80/T80.qip
+set_global_assignment -name QIP_FILE rtl/sound.qip
+set_global_assignment -name VERILOG_FILE rtl/cpu_z80.v
+set_global_assignment -name VHDL_FILE rtl/spram.vhd
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/MyVision.v
+set_global_assignment -name SDC_FILE MyVision.sdc
+set_global_assignment -name SYSTEMVERILOG_FILE MyVision.sv
