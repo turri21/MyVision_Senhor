@@ -17,3 +17,16 @@ Console : |<kbd>1</kbd> | <kbd>2</kbd> | <kbd>3</kbd> | <kbd>4</kbd> | <kbd>5</k
 ----------|-|-|-|-|-|-|-|-|-|--|--|--|--|--|-|-|-|-|-|
 Option A : |<kbd>1</kbd> | <kbd>2</kbd> | <kbd>3</kbd> | <kbd>4</kbd> | <kbd>5</kbd> | <kbd>6</kbd> | <kbd>7</kbd> | <kbd>8</kbd> | <kbd>9</kbd> | <kbd>0</kbd> | <kbd>-</kbd> | <kbd>=</kbd> | <kbd>⌫</kbd> | <kbd>\\</kbd> | <kbd>←</kbd> | <kbd>↑</kbd> | <kbd>↓</kbd> | <kbd>→</kbd> | <kbd>Space</kbd>
 Option B: |<kbd>A</kbd> | <kbd>B</kbd> | <kbd>C</kbd> | <kbd>D</kbd> | <kbd>E</kbd> | <kbd>F</kbd> | <kbd>G</kbd> | <kbd>H</kbd> | <kbd>I</kbd> | <kbd>J</kbd> | <kbd>K</kbd> | <kbd>L</kbd> | <kbd>M</kbd> | <kbd>N</kbd> |  <kbd>←</kbd> | <kbd>↑</kbd> | <kbd>↓</kbd> | <kbd>→</kbd> | <kbd>Fire</kbd>
+
+## Prepping Files
+If your game is a zip and contains multiple files such as "f1" "f2" and so on, then you'll need to convert them to .bin for the core to be able to load it. First extract those files and then perform the following commands.
+
+**Using MS-DOS/CMD:**
+```
+copy /B f1 + /B f2 + /B f3 Hanafuda.bin
+```
+   
+**Using Linux/MiSTer:**
+```
+cat f1 f2 f3 > Hanafuda.bin
+```
