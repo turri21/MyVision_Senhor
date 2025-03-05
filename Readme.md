@@ -6,6 +6,8 @@
 
 Tested: Working Video 720p, 1080p & Sound.
 
+Dev notes: Updated Framework to the current version as of 5/3/2025 - Added Joystick swap
+         
 ___
 # [My Vision](https://wikipedia.org/wiki/My_Vision) for [MiSTer](https://mister-devel.github.io/MkDocs_MiSTer/)
 This is an FPGA implementation of the My Vision Console by Nichibutsu for the MiSTer FPGA platform.
