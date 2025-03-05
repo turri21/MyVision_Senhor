@@ -207,6 +207,8 @@ localparam CONF_STR = {
 	"-;",
 	"O[3:2],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];",
 	"-;",
+	"O4,Swap Joystick,Off,On;",
+	"-;",
 	"R[0],Reset;",
 	"J,Fire (E);",
 	"V,v",`BUILD_DATE 
@@ -217,12 +219,16 @@ wire   [1:0] buttons;
 wire [127:0] status;
 wire  [10:0] ps2_key;
 wire  [31:0] joy0, joy1;
+wire  [31:0] joy_s0, joy_s1;
 wire         ioctl_download;
 wire   [7:0] ioctl_index;
 wire         ioctl_wr;
 wire  [24:0] ioctl_addr;
 wire   [7:0] ioctl_dout;
 wire  [21:0] gamma_bus;
+
+assign joy_s0 = status[4] ? joy1 : joy0;
+assign joy_s1 = status[4] ? joy0 : joy1;
 
 hps_io #(.CONF_STR(CONF_STR)) hps_io
 (
@@ -319,8 +325,8 @@ MyVision console
 	.cpu_ram_d_i(ram_di),
 	.cpu_ram_d_o(ram_do),
 
-	.joy0(joy0),
-	.joy1(joy1),
+	.joy0(joy_s0),
+	.joy1(joy_s1),
 	.ps2_key(ps2_key),
 
 
