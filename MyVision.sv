@@ -54,6 +54,8 @@ module emu
 	input  [11:0] HDMI_WIDTH,
 	input  [11:0] HDMI_HEIGHT,
 	output        HDMI_FREEZE,
+	output        HDMI_BLACKOUT,
+	output        HDMI_BOB_DEINT,
 
 `ifdef MISTER_FB
 	// Use framebuffer in DDRAM
@@ -185,6 +187,8 @@ assign VGA_F1 = 0;
 assign VGA_SCALER = 0;
 assign VGA_DISABLE = 0;
 assign HDMI_FREEZE = 0;
+assign HDMI_BLACKOUT = 0;
+assign HDMI_BOB_DEINT = 0;
 
 assign LED_DISK = 0;
 assign LED_POWER = 0;
@@ -216,7 +220,7 @@ wire forced_scandoubler;
 wire   [1:0] buttons;
 wire [127:0] status;
 wire  [10:0] ps2_key;
-wire  [31:0] joy0, joy1;
+wire  [31:0] joy;
 wire         ioctl_download;
 wire   [7:0] ioctl_index;
 wire         ioctl_wr;
@@ -243,8 +247,7 @@ hps_io #(.CONF_STR(CONF_STR)) hps_io
 	.status(status),
 	.status_menumask(),
 
-	.joystick_0(joy0),
-	.joystick_1(joy1),
+	.joystick_0(joy),
 	
 	.ps2_key(ps2_key)
 );
@@ -319,8 +322,7 @@ MyVision console
 	.cpu_ram_d_i(ram_di),
 	.cpu_ram_d_o(ram_do),
 
-	.joy0(joy0),
-	.joy1(joy1),
+	.joy(joy),
 	.ps2_key(ps2_key),
 
 

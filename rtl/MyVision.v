@@ -14,8 +14,7 @@ module MyVision
 
 	//////////// Controller Interface /////////////
 	input [10:0]  ps2_key,
-	input [31:0]  joy0,
-	input [31:0]  joy1,
+	input [31:0]  joy,
 
 	////////////// AUDIO Interface //////////////
 	output [9:0] audio,
@@ -180,10 +179,10 @@ always @(posedge clk_3m58) begin
 end
 
 wire [7:0] key_row[4];
-assign key_row[0] = { btn_1 , btn_5 , btn_9 , btn_down & ~joy0[2] , btn_13 , 3'b111 };
-assign key_row[1] = { btn_4 , btn_8 , btn_12 , 1'b1 , btn_up & ~joy0[3] , 3'b111 };
-assign key_row[2] = { btn_2 , btn_6 , btn_10 , btn_right & ~joy0[0] , btn_14 , 3'b111 };
-assign key_row[3] = { btn_3 , btn_7 , btn_11 , btn_fire & ~joy0[4] , btn_left & ~joy0[1] , 3'b111 };
+assign key_row[0] = { btn_1 , btn_5 , btn_9 , btn_down & ~joy[2] , btn_13 , 3'b111 };
+assign key_row[1] = { btn_4 , btn_8 , btn_12 , 1'b1 , btn_up & ~joy[3] , 3'b111 };
+assign key_row[2] = { btn_2 , btn_6 , btn_10 , btn_right & ~joy[0] , btn_14 , 3'b111 };
+assign key_row[3] = { btn_3 , btn_7 , btn_11 , btn_fire & ~joy[4] , btn_left & ~joy[1] , 3'b111 };
 
 reg btn_1     = 1;
 reg btn_2     = 1;
