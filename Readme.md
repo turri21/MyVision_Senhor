@@ -4,7 +4,7 @@
 
 -=(MyVision_Senhor notes)=-
 
-Tested: Working Video 720p, 1080p & Sound
+Tested: Working Video 720p, 1080p & Sound.
 
 ___
 # [My Vision](https://wikipedia.org/wiki/My_Vision) for [MiSTer](https://mister-devel.github.io/MkDocs_MiSTer/)
