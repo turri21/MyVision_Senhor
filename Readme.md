@@ -1,6 +1,7 @@
 <p align="center">
     <img style="width: 400px;" src="img/MyVision.gif">
 </p>
+
 -=(MyVision_Senhor notes)=-
 
 Tested: Working Video 720p, 1080p & Sound
