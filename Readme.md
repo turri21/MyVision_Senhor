@@ -1,7 +1,11 @@
 <p align="center">
     <img style="width: 400px;" src="img/MyVision.gif">
 </p>
+-=(MyVision_Senhor notes)=-
 
+Tested: Working Video 720p, 1080p & Sound
+
+___
 # [My Vision](https://wikipedia.org/wiki/My_Vision) for [MiSTer](https://mister-devel.github.io/MkDocs_MiSTer/)
 This is an FPGA implementation of the My Vision Console by Nichibutsu for the MiSTer FPGA platform.
 
